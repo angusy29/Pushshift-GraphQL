@@ -3,6 +3,7 @@
 [![Build Status](https://travis-ci.org/angusy29/Pushshift-GraphQL.svg?branch=master)](https://travis-ci.org/angusy29/Pushshift-GraphQL)
 
 Personal project to experiment with GraphQL.
+
 Provides a GraphQL wrapper around Pushshift's Reddit REST API.
 
 ## Getting Started
