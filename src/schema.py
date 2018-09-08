@@ -3,6 +3,7 @@ from graphene import ObjectType, String, Boolean, ID, Field, Int
 class Preview(ObjectType):
     enabled = Boolean()
 
+
 class Post(ObjectType):
     author = String()
     author_fullname = String()
