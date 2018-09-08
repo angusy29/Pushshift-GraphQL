@@ -13,7 +13,10 @@ class TestUtils:
     def test_build_url(self):
         url = build_url(self.url, {'subreddit': 'pics', 'size': 100})
         assert url == self.url + \
-                           '?subreddit=pics&size=100&sort=desc&sort_type=created_utc'
+                           '?size=100&sort=desc&sort_type=created_utc&subreddit=pics'
 
         url = build_url(self.url, {'subreddit': 'oldschoolcool'})
-        assert url == self.url + '?subreddit=oldschoolcool&size=25&sort=desc&sort_type=created_utc'
+        assert url == self.url + '?size=25&sort=desc&sort_type=created_utc&subreddit=oldschoolcool'
+
+        url = build_url(self.url, {})
+        assert url == self.url + '?size=25&sort=desc&sort_type=created_utc'
