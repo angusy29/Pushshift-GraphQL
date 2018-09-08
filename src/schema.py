@@ -1,19 +1,37 @@
-from graphene import ObjectType, String, Boolean, ID, Field, Int
+from graphene import ObjectType, String, Boolean, ID, Field, Int, List
+
+
+class Source_Resolution(ObjectType):
+    height = Int()
+    url = String()
+    width = Int()
+
+
+class Images(ObjectType):
+    id = String()
+    resolutions = List(Source_Resolution)
+    source = Field(Source_Resolution)
+    # variants = Field(variants)
+
 
 class Preview(ObjectType):
     enabled = Boolean()
+    images = List(Images)
 
 
 class Post(ObjectType):
     author = String()
     author_fullname = String()
     can_mod_post = Boolean()
+    content_categories = List(String)
+    contest_mode = Boolean()
     created_utc = Int()
     domain = String()
     full_link = String()
     gilded = Int()
     id = ID()
     is_crosspostable = Boolean()
+    is_mtea = Boolean()
     is_reddit_media_domain = Boolean()
     is_self = Boolean()
     is_video = Boolean()
@@ -43,6 +61,8 @@ class Post(ObjectType):
     subreddit_subscribers = Int()
     subreddit_type = String()
     thumbnail = String()
+    thumbnail_height: Int()
+    thumbnail_width: Int()
     title = String()
     url = String()
     whitelist_status = String()

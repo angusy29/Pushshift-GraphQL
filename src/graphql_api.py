@@ -6,10 +6,12 @@ from utils import json2obj
 
 class GraphQueryLangApi(ObjectType):
     subreddit_submissions = List(Post,
-                                 subreddit=String(required=True),
+                                 q=String(required=False),
                                  size=Int(required=False),
                                  sort=String(required=False),
-                                 sort_type=String(required=False))
+                                 sort_type=String(required=False),
+                                 author=String(required=False),
+                                 subreddit=String(required=False))
 
     def resolve_subreddit_submissions(self, info, **kwargs):
         '''

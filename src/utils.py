@@ -14,10 +14,18 @@ def get_request(url):
     return response
 
 def build_url(url, kwargs):
-    url += f'?subreddit='  + kwargs.get('subreddit', 'pics')
-    url += f'&size=' + str(kwargs.get('size', 25))
+    url += f'?size=' + str(kwargs.get('size', 25))
     url += f'&sort=' + kwargs.get('sort', 'desc')
     url += f'&sort_type=' + kwargs.get('sort_type', 'created_utc')
+
+    if kwargs.get('q'):
+        url += f'&q=' + kwargs.get('q')
+
+    if kwargs.get('author'):
+        url += f'&author=' + kwargs.get('author')
+
+    if kwargs.get('subreddit'):
+        url += f'&subreddit='  + kwargs.get('subreddit')
 
     return url
 
