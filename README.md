@@ -41,6 +41,9 @@ Visit http://localhost:5000/graphql to make queries
 }
 ```
 
+## GraphQL API
+* To be documented
+
 ## Running the tests
 
 ```
@@ -53,3 +56,7 @@ pytest
 * [flask](http://flask.pocoo.org) - Web microframework
 * [graphene](https://docs.graphene-python.org/en/latest/) - Library for building GraphQL APIs
 * [pushshift.io](https://github.com/pushshift/api) - Provides Reddit data for this project via REST API
+
+## Future work
+
+* Integrate with Pushshift's Elasticsearch
