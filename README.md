@@ -14,7 +14,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 Requirements can be installed via:
 ```
-pip3 install requirements.txt
+pip3 install -r requirements.txt
 ```
 
 ### Installing
