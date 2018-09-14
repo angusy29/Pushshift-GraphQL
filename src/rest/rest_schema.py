@@ -31,7 +31,7 @@ class Post(ObjectType):
     gilded = Int()
     id = ID()
     is_crosspostable = Boolean()
-    is_mtea = Boolean()
+    is_meta = Boolean()
     is_reddit_media_domain = Boolean()
     is_self = Boolean()
     is_video = Boolean()

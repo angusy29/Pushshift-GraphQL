@@ -1,10 +1,9 @@
 from flask import jsonify
 from utils import get_request, build_url
 
-
 def get_submissions(kwargs):
     '''
-    Fed keyword arguments, builds URL based on arguments
+    Keyword arguments are fed into this function, builds URL based on arguments
     Then makes a GET request to the URL
     :param kwargs:
     :return: JSON response
