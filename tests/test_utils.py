@@ -10,6 +10,7 @@ class TestUtils:
         response = get_request(self.url)
         assert response.status_code == 200
 
+
     def test_build_url(self):
         url = build_url(self.url, {'subreddit': 'pics', 'size': 100})
         assert url == self.url + \

@@ -62,7 +62,8 @@ def build_elastic_url(url, kwargs):
         if idx is not len(queries) - 1:
             url += ' OR '
 
-    url += f'&sort={kwargs.get("sort_type", "created_utc")}:{kwargs.get("sort", "desc")}'
+    url += f'?' if len(queries) == 0 else '&'
+    url += f'sort={kwargs.get("sort_type", "created_utc")}:{kwargs.get("sort", "desc")}'
     url += f'&size={str(kwargs.get("size", 25))}'
 
     return url
